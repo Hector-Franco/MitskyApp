@@ -1,0 +1,21 @@
+.fondo {
+    background-image: url('../../../assets/images/home.jpg');
+    padding-bottom: 300px;
+    background-position: center;   
+}
+
+h1 {
+    font-family: "Monoton";
+    font-size: 100px;
+    color: #FFF;
+}
+
+.btn-unete {
+    background-color: #CE0D4D;
+    color: #FFF;
+}
+
+.btn-gris {
+    background-color: rgba(#444,#444,#444, 0.5);
+    color: #FFF;
+}

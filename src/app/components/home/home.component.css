@@ -1,0 +1,37 @@
+.fondo {
+    position: relative;
+}
+.black {
+    background-color: #000;
+    color: white;
+    padding: 10px 0px 30px 0px;
+    border-top: 2px solid #FFF;
+
+}
+
+h3.home, h2.home {
+    text-align: center;
+}
+
+.col-left {
+    border-right: 2px solid #FFF;
+}
+
+.content {
+    text-align: justify;
+    font-size: 20px;
+    margin: 30px 30px 30px 0px;
+}
+
+.home-button {
+    text-align: center;
+}
+
+.btn-unete {
+    background-color: #CE0D4D;
+    color: #FFF;
+}
+
+.main {
+    margin: 50px 0px 30px 0px;
+}
