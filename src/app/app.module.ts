@@ -4,8 +4,6 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule} from '@angular/material/button';
-import { MatGridListModule} from '@angular/material';
 
 // COMPONENTS
 import { RegisterComponent } from './components/register/register.component';
@@ -17,6 +15,9 @@ import { HomeComponent } from './components/home/home.component';
 import { EventsComponent } from './components/events/events.component';
 import { BillingsComponent } from './components/billings/billings.component';
 import { BookingsComponent } from './components/bookings/bookings.component';
+import { UsersComponent } from './components/users/users.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,15 +30,15 @@ import { BookingsComponent } from './components/bookings/bookings.component';
     HomeComponent,
     EventsComponent,
     BillingsComponent,
-    BookingsComponent
+    BookingsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatGridListModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
