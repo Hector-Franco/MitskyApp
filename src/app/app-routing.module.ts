@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { UsersComponent } from './components/users/users.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ClubsComponent } from './components/clubs/clubs.component';
 
 
 const routes: Routes =
@@ -21,6 +23,16 @@ const routes: Routes =
     component: UsersComponent,
     path: 'users',
     data: {title: 'MITSKY | Users'}
+  },
+  {
+    component: RegisterComponent,
+    path: 'register',
+    data: {title: 'MITSKY | Register'}
+  },
+  {
+    component: ClubsComponent,
+    path: 'clubs',
+    data: {title: 'MITSKY | clubs'}
   }
 ];
 

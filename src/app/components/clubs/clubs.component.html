@@ -1,1 +1,53 @@
-<p>clubs works!</p>
+<div  style="background-color: rgba(59, 54, 59, 0.924); ">
+    <div class="row">
+        <div class="col-sm-9"></div>
+        <div class="col-sm-3">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="../../../assets/images/twitter.png" alt="" srcset="">
+                </div>
+                <div class="col-sm-2">
+                    <img src="../../../assets/images/instagram_1.png" alt="" srcset="">
+                </div>
+                <div class="col-sm-2">
+                    <img src="../../../assets/images/facebook.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>MITSKY</h1>
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="card" style="width: 15rem; margin-bottom: 20px; padding: 3px;" *ngFor="let club of clubs; let i = index">
+    <img src="../../../assets/images/bares.jpg" style="width: 100px;" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+        <h5 class="card-title">
+            <span class="badge badge-pill badge-warning">
+                {{i+1}}
+            </span>
+            <a >
+                {{club.name}}
+            </a>
+
+        </h5>
+
+        <p class="card-text">
+            Dirección: {{club.address}}
+            <br>
+            Calificación : {{club.rate}}    
+            <br>
+            Música: {{club.kindOfMusic}}
+        </p>
+        
+    </div>
+</div>
+  
+     

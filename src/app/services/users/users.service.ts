@@ -35,17 +35,24 @@ export class UsersService {
       map(this.extractData));
   }
 
-  public addUser(user: User): Observable<any> {
-    console.log(user);
+  public addUser(email: string,
+                 name: string,
+                 lastname: string,
+                 birthdate: string,
+                 password: string): Observable<any> {
     return this.http.post<User>
       (
-        this.endPoint + 'users/create',
-        JSON.stringify(user),
+        this.endPoint + 'users/create?'
+                      + 'email=' + email + '&'
+                      + 'name=' + name + '&'
+                      + 'lastname=' + lastname + '&'
+                      + 'birthdate=' + birthdate + '&'
+                      + 'password=' + password,
         this.httpOptions
       )
       .pipe(
         tap((userRes) => console.log(`User added with id=${userRes.id}`)),
-        catchError(this.handleError<any>('Error adding user: \n' + user))
+        catchError(this.handleError<any>('Error adding user: \n' + email))
       );
   }
 
@@ -65,6 +72,21 @@ export class UsersService {
     return this.http.delete<any>(this.endPoint + 'users/' + id, this.httpOptions).pipe(
       tap(_ => console.log(`deleted USER with id=${id}`)),
       catchError(this.handleError<any>('Error deleting User'))
+    );
+  }
+
+
+  public loginUser(email: string, password: string): Observable<any> {
+    return this.http.post<User>
+    (
+      this.endPoint + 'login?'
+                    + 'email=' + email + '&'
+                    + 'password=' + password,
+      this.httpOptions
+    )
+    .pipe(
+      tap((login) => console.log(`User logged? = ${login}`)),
+      catchError(this.handleError<any>('NOT LOGGED'))
     );
   }
 

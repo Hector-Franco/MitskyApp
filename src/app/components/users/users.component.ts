@@ -14,8 +14,8 @@ export class UsersComponent implements OnInit {
   users: any = [];
 
   constructor(private restUser: UsersService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.getUsers();
@@ -29,5 +29,19 @@ export class UsersComponent implements OnInit {
     });
   }
 
+
+  addUser(email: string,
+          name: string,
+          lastname: string,
+          birthdate: string,
+          password: string) {
+
+    this.restUser.addUser(email, name, lastname, birthdate, password)
+      .subscribe
+      (
+        (result) => console.log('EXITO'),
+        (error) => console.log('ERROR')
+      );
+  }
 
 }

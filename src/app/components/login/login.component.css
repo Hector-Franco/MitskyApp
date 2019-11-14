@@ -3,6 +3,8 @@
     margin: auto;
     padding: 20px 35px 20px 35px;
     width: 30%;
+    color: #FFF;
+
 }
 
 .fondo {
@@ -15,4 +17,13 @@ h1 {
     font-family: "Monoton";
     font-size: 100px;
     color: #FFF;
+}
+
+.btn-unete {
+    background-color: #CE0D4D;
+    color: #FFF;
+}
+
+.margin {
+    margin-bottom: 150px;
 }

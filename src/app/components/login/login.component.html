@@ -29,18 +29,18 @@
         <div class="login">
             <form>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email">
+                    <label for="exampleInputEmail1">E-mail</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp"  [(ngModel)]="email" name="email" required>
 
                 </div>
 
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <div class="form-group margin">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1"  [(ngModel)]="password" name="password" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                <button type="submit" class="btn btn-unete btn-block" (click)="loginUser(email, password)">Inicar
+                    Sesión</button>
             </form>
         </div>
     </div>

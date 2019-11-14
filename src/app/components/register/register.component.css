@@ -1,0 +1,24 @@
+.register {
+    background-color: #000;
+    margin: auto;
+    padding: 30px 45px 30px 45px;
+    width: 40%;
+    color: #FFF;
+}
+
+.fondo {
+    background-color: grey;
+    padding-bottom: 300px;
+    background-position: center;   
+}
+
+h1 {
+    font-family: "Monoton";
+    font-size: 100px;
+    color: #FFF;
+}
+
+.btn-unete {
+    background-color: #CE0D4D;
+    color: #FFF;
+}
